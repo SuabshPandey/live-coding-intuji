@@ -26,11 +26,11 @@ export class LayoutComponent {
   }
 
   menuItems = [
-    {
-      label: 'Home',
-      route: '/home',
-      icon: 'pi pi-home',
-    },
+    // {
+    //   label: 'Home',
+    //   route: '/home',
+    //   icon: 'pi pi-home',
+    // },
 
     {
       label: 'Products',
