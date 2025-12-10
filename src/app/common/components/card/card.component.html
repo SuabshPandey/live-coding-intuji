@@ -1,6 +1,6 @@
 <p-card>
   <div class="card-grid">
-    @for (item of data; track item.id) {
+    @if (data.length >=0) { @for (item of data; track item.id) {
     <article class="product-card">
       <div class="product-image">
         <img [src]="item?.images" alt="{{ item?.title }}" />
@@ -19,6 +19,8 @@
         </p>
       </div>
     </article>
+    } } @else {
+    <h4>No products found!</h4>
     }
   </div>
 </p-card>

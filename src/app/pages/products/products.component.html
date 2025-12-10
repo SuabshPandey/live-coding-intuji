@@ -12,13 +12,13 @@
   </div>
 </div> -->
 
-<!-- <input
+<input
   class="w-full p-4 text-lg border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
   type="text"
-  placeholder="Search Users"
+  placeholder="Search Products"
   [(ngModel)]="searchQuery"
   (ngModelChange)="onSearch($event)"
-/> -->
+/>
 
 <app-card [data]="products"></app-card>
 
@@ -27,3 +27,11 @@
   <app-loader></app-loader>
 </div>
 }
+
+<!-- <p-paginator
+  (onPageChange)="onPageChange($event)"
+  [first]="first"
+  [rows]="rows"
+  [totalRecords]=totalRecords
+  [rowsPerPageOptions]="[10, 20, 30]"
+/> -->
