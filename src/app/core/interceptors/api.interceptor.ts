@@ -15,14 +15,14 @@ export const apiInterceptor: HttpInterceptorFn = (
   next: HttpHandlerFn
 ) => {
   const msg = inject(MessageServiceWrapper);
-  const token = localStorage.getItem('token');
-  if (!req.url.includes('auth')) {
-    req = req.clone({
-      setHeaders: {
-        Authorization: token ? `Bearer ${token}` : '',
-      },
-    });
-  }
+  // const token = localStorage.getItem('token');
+  // if (!req.url.includes('auth')) {
+  //   req = req.clone({
+  //     setHeaders: {
+  //       Authorization: token ? `Bearer ${token}` : '',
+  //     },
+  //   });
+  // }
   return next(req).pipe(
     catchError((error: HttpErrorResponse) => {
       if (error.status === 0) {
